@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: nodejs19
+  name: exam
   labels:
-    app: nodejs19
+    app: exam
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: nodejs19
+      app: exam
   template:
     metadata:
       labels:
-        app: nodejs19
+        app: exam
     spec:
       containers:
-      - name: node019
+      - name: exam
         image: hapra123/node_019:latest
         ports:
         - containerPort: 3000 
