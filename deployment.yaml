@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nodejs19
+  labels:
+    app: nodejs19
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: nodejs19
+  template:
+    metadata:
+      labels:
+        app: nodejs19
+    spec:
+      containers:
+      - name: node019
+        image: hapra123/node_019:latest
+        ports:
+        - containerPort: 3000 
